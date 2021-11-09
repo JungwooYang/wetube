@@ -1,0 +1,28 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "The best way to watch videos.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JungwooYang/wetube.git"
+  },
+  "author": "Jungwoo Yang<euistgh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JungwooYang/wetube/issues"
+  },
+  "homepage": "https://github.com/JungwooYang/wetube#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "nodemon": "^2.0.14"
+  }
+}
