@@ -2,7 +2,6 @@
   "name": "wetube",
   "version": "1.0.0",
   "description": "The best way to watch videos.",
-  "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js"
   },
@@ -17,7 +16,8 @@
   },
   "homepage": "https://github.com/JungwooYang/wetube#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
