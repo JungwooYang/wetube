@@ -1,0 +1,11 @@
+extends base
+includ mixins/video
+
+block content 
+    form(method="GET")
+        input(placeholder="Search by title", type="text", name="keyword")
+        input(value="Search now", type="submit")
+
+    div 
+        each video in videos 
+            +video(video)
