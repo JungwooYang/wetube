@@ -1,0 +1,12 @@
+extends base
+
+block content 
+    if errorMessage 
+        h4=errorMessage 
+    form(method="POST")
+        input(name=name, placeholder=name, required, type="text")
+        input(name=email, placeholder=email, required, type="email")
+        input(name=username, placeholder=username, required, type="text")
+        input(name=password, placeholder=password, required, type="password")
+        input(name=location, placeholder=location, type="text")
+        input(value="Join now", type="submit")
