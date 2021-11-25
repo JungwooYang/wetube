@@ -1,17 +1,17 @@
 extends base
 
 block content 
-    if errorMessage 
-        h4=errorMessage 
-    form(method="POST")
-        input(name="name", placeholder="name", required, type="text")
-        input(name="email", placeholder="email", required, type="email")
-        input(name="username", placeholder="username", required, type="text")
-        input(name="password", placeholder="password", required, type="password")
-        input(name="password2", placeholder="password confirm", required, type="password")
-        input(name="location", placeholder="location", type="text", required)
-        input(value="Join now", type="submit")
-    hr
-    div 
-        span Already have an account? 
-        a(href="/login") Log in now &rarr;
+  if errorMessage 
+    h4=errorMessage 
+  form(method="POST")
+    input(name="name", placeholder="name", required, type="text")
+    input(name="email", placeholder="email", required, type="email")
+    input(name="username", placeholder="username", required, type="text")
+    input(name="password", placeholder="password", required, type="password")
+    input(name="password2", placeholder="password confirm", required, type="password")
+    input(name="location", placeholder="location", type="text", required)
+    input(value="Join now", type="submit")
+  hr
+  div 
+    span Already have an account? 
+    a(href="/login") Log in now &rarr;

@@ -1,14 +1,13 @@
 extends base
 
 block content 
-    if errorMessage 
-        h4=errorMessage 
-    form(method="POST")
-        input(name="username", placeholder="username", required, type="text")
-        input(name="password", placeholder="password", required, type="password")
-        input(value="Log in now", type="submit")
-    hr
-    div 
-        span Don't have an account? 
-        a(href="/join") Join now &rarr;
-        
+  if errorMessage 
+    h4=errorMessage 
+  form(method="POST")
+    input(name="username", placeholder="username", required, type="text")
+    input(name="password", placeholder="password", required, type="password")
+    input(value="Log in now", type="submit")
+  hr
+  div 
+    span Don't have an account? 
+    a(href="/join") Join now &rarr;

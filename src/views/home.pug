@@ -2,8 +2,8 @@ extends base
 include mixins/video
 
 block content 
-    h2 Welcome here you will see the trending videos
-    each i in videos
-        +video(i)
-    else 
-        div Sorry nothing found
+  h2 Welcome here you will see the trending videos
+  each i in videos
+    +video(i)
+  else 
+    div Sorry nothing found
