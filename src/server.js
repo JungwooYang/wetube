@@ -1,10 +1,11 @@
 import express from "express";
 import morgan from "morgan";
 import session from "express-session";
+import MongoStore from "connect-mongo";
 import rootRouter from "./routers/rootRouters";
 import videoRouter from "./routers/videoRouters";
 import userRouter from "./routers/userRouters";
-import { localsMiddleware, loginMiddleware } from "./middlewars";
+import { localsMiddleware } from "./middlewares";
 
 const app = express();
 const logger = morgan("dev")
@@ -15,9 +16,10 @@ app.use(logger);
 app.use(express.urlencoded({ extended: true}));
 app.use(
   session({
-    secret: "Hello!",
-    resave: true,
-    saveUninitialized: true,
+    secret: process.env.COOKIE_SCRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: "mongodb://127.0.0.1:27017/wetube" })
   })
 );
   
