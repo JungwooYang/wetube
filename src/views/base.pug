@@ -1,8 +1,8 @@
 doctype html
 html(lang="ko")
   head
-    title #{pageTitle} - Wetube
-    link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+  title #{pageTitle} - #{siteName}
+  link(rel="stylesheet" href="https://unpkg.com/mvp.css")
   body 
     header 
       h1=pageTitle
@@ -10,7 +10,12 @@ html(lang="ko")
         ul 
           li 
             a(href="/") Home
-          if !req.session.loggedIn
+          if loggedIn
+            li 
+              a(href="/logout") Log Out 
+            li 
+              a(href="/my-profile") #{loggedInUser.name}'s profile 
+          else 
             li 
               a(href="/join") Join
             li 

@@ -4,6 +4,7 @@ import session from "express-session";
 import rootRouter from "./routers/rootRouters";
 import videoRouter from "./routers/videoRouters";
 import userRouter from "./routers/userRouters";
+import { localsMiddleware, loginMiddleware } from "./middlewars";
 
 const app = express();
 const logger = morgan("dev")
@@ -20,14 +21,7 @@ app.use(
   })
 );
   
-app.use((req, res, next) => {
-  r
-  req.sessionStore.all((error, sessions) => {
-    console.log(sessions);
-    next();
-  });
-});
-
+app.use(localsMiddleware);
 app.use("/", rootRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
