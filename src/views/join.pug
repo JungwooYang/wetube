@@ -1,4 +1,4 @@
-extends ../base
+extends base
 
 block content 
   if errorMessage 
@@ -11,7 +11,7 @@ block content
     input(name="password2", placeholder="password confirm", required, type="password")
     input(name="location", placeholder="location", type="text", required)
     input(value="Join now", type="submit")
-  hr
-  div 
+    include partials/social-login
+  div.auth-switch
     span Already have an account? 
     a(href="/login") Log in now &rarr;
