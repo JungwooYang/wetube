@@ -44,17 +44,23 @@ const handleVolumeChange = (event) => {
     muteBtn.innerText = "Unmute";
   }
 };
+const formatTime = (seconds) => {
+  return new Date(seconds * 1000).toISOString().substr(11, 8);
+};
 
 const handleLoadedMetadta = () => {
-  totalTime.innerText = Math.floor(video.duration);
+  return (totalTime.innerText = formatTime(Math.floor(video.duration)));
 };
 
 const handleTimeupdate = () => {
-  currentTime.innerText = Math.floor(video.currentTime);
+  return (currentTime.innerText = formatTime(Math.floor(video.currentTime)));
 };
-
 playBtn.addEventListener("click", handlePlayClick);
 muteBtn.addEventListener("click", handleMuteClick);
 volumeRange.addEventListener("input", handleVolumeChange);
 video.addEventListener("loadedmetadata", handleLoadedMetadta);
 video.addEventListener("timeupdate", handleTimeupdate);
+
+if (video.readyState == 4) {
+  handleLoadedMetadata();
+}
