@@ -44,14 +44,14 @@ const handleVolumeChange = (event) => {
   } = event;
   if (video.muted) {
     video.muted = false;
-    muteBtn.innerText = "Mute";
+    muteBtnIcon.classList = "fas fa-volume-up";
   }
   volumeValue = value;
   video.volume = value;
 
   if (video.volume === 0) {
     video.muted = true;
-    // muteBtn.classList = "fas fa-volume-up";
+    muteBtnIcon.classList = "fas fa-volume-mute";
   }
 };
 
@@ -113,7 +113,6 @@ const handleEnded = () => {
 };
 
 const handleKeyPress = (event) => {
-  console.log(event);
   switch (event.key) {
     case " ":
       handlePlayClick();

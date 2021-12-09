@@ -1,16 +1,16 @@
 extends base
 
-block content 
-  if errorMessage 
-    h4=errorMessage 
+block content
+  if errorMessage
+    span=errorMessage
   form(method="POST")
-    input(name="name", placeholder="name", required, type="text")
-    input(name="email", placeholder="email", required, type="email")
-    input(name="username", placeholder="username", required, type="text")
-    input(name="password", placeholder="password", required, type="password")
-    input(name="password2", placeholder="password confirm", required, type="password")
-    input(name="location", placeholder="location", type="text", required)
-    input(value="Join now", type="submit")
+    input(placeholder="Name", name="name", type="text", required)
+    input(placeholder="Email", name="email", type="email", required)
+    input(placeholder="Username", name="username", type="text", required)
+    input(placeholder="Password", name="password", type="password", required)
+    input(placeholder="Confirm Password", name="password2", type="password", required)
+    input(placeholder="Location", name="location", type="text", required)
+    input(type="submit", value="Join")
     include partials/social-login
   div.auth-switch
     span Already have an account? 

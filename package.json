@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/JungwooYang/wetube#readme",
   "dependencies": {
+    "@ffmpeg/core": "^0.10.0",
+    "@ffmpeg/ffmpeg": "^0.10.1",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.6.0",
     "dotenv": "^10.0.0",
@@ -27,7 +29,8 @@
     "multer": "^1.4.3",
     "node-fetch": "^2.6.1",
     "npm": "^8.1.4",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

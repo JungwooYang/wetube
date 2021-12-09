@@ -14,11 +14,12 @@ header
         li
           a(href="/users/logout")  Log Out
         li
-          a(href=`/users/${loggedInUser._id}`) My Profile
-            if !loggedInUser.avatarUrl
+          a(href=`/users/${loggedInUser._id}`)
+            if loggedInUser.avatarUrl === ""
               span 😀
             else 
-              img.header__avatar(src="/" + loggedInuser.avatarUrl)
+              span 😀😀
+              //- img.header__avatar(src="/" + loggedInuser.avatarUrl)
       else
         li 
           a(href="/login") Login
