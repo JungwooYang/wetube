@@ -32,8 +32,8 @@ const handleDownload = async () => {
   ffmpeg.FS("writeFile", files.input, await fetchFile(videoFile));
 
   await ffmpeg.run("-i", files.input, "-r", "60", files.output);
-
   await ffmpeg.run("-i", files.input, "-ss", "-frames:v", "1", files.thumb);
+
   const mp4File = ffmpeg.FS("readFile", files.output);
   const thumbFile = ffmpeg.FS("readFile", files.thumb);
 
