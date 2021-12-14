@@ -117,7 +117,7 @@ const handleKeyPress = (event) => {
     case " ":
       handlePlayClick();
       break;
-    case "f":
+    case "Enter":
       handleFullscreen();
       break;
     case "Escape":
