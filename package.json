@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "The best way to watch videos.",
   "scripts": {
+    "start": "node build/init.js",
+    "build": "npm run build:server && npm run build:assets",
+    "build:server": "babel src -d build --ignore src/client",
+    "build:assets": "webpack --mode=production",
     "dev:server": "nodemon",
-    "dev:assets": "webpack"
+    "dev:assets": "webpack --mode=development -w "
   },
   "repository": {
     "type": "git",
@@ -17,9 +21,9 @@
   },
   "homepage": "https://github.com/JungwooYang/wetube#readme",
   "dependencies": {
+    
     "@ffmpeg/core": "^0.10.0",
     "@ffmpeg/ffmpeg": "^0.10.1",
-    "assert": "^2.0.0",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.6.0",
     "dotenv": "^10.0.0",
@@ -36,8 +40,10 @@
     "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/node": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.5",
     "@babel/preset-env": "^7.16.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",

@@ -12,7 +12,7 @@ header
                 li
                     a(href="/users/edit") Edit Profile
                 li
-                    a(href="/users/logout")  Log Out
+                    a(href="/users/logout") Log Out
                 li
                     a(href=`/users/${loggedInUser._id}`)
                         if loggedInUser.avatarUrl === ""
@@ -21,6 +21,6 @@ header
                             img.header__avatar(src="/" + loggedInUser.avatarUrl)
             else
                 li
-                    a(href="/login")  Login                        
+                    a(href="/login") Login 
                 li
-                    a(href="/join").header__btn  Join
+                    a(href="/join").header__btn Join

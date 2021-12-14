@@ -1,6 +1,6 @@
 /node_modules
-/chal
 .env
 /uploads
 .DS_Store
 /assets
+/build
