@@ -64,7 +64,7 @@ const handleDeleteComment = async (event) => {
 console.log("videoComments" + videoComments);
 console.log("comment__delete" + comment__delete.length);
 
-comment__delete.addEventListener("click", handleDeleteComment);
+// comment__delete.addEventListener("click", handleDeleteComment);
 
 if (form) {
   form.addEventListener("submit", handleSubmit);
