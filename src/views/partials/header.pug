@@ -15,14 +15,13 @@ header
                     a(href="/users/logout") Log Out
                 li
                     a(href=`/users/${loggedInUser._id}`)
-                        if (!loggedInUser.avatarUrl) || (loggedInUser.avatarUrl === undefined)
-                            span 😀
+                        if loggedInUser.avatarUrl
+                            if loggedInuser.avatarUrl.includes("github")
+                                img.header__avatar(src=loggedInUser.avatarUrl)
+                            else 
+                                img.header__avatar(src=loggedInUser.avatarUrl)
                         else
-                            if loggedInUser.avatarUrl
-                                if loggedInuser.avatarUrl.includes("github")
-                                    img.header__avatar(src=loggedInUser.avatarUrl)
-                                else 
-                                    img.header__avatar(src=loggedInUser.avatarUrl)
+                            span 😀
                             
             else
                 li
