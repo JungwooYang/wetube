@@ -25,7 +25,7 @@ const s3VideoUploader = multerS3({
 
 export const localsMiddleware = (req, res, next) => {
   res.locals.loggedIn = Boolean(req.session.loggedIn);
-  res.locals.siteName = "Wetube";
+  res.locals.siteName = "Yourtube";
   res.locals.loggedInUser = req.session.user || {};
   res.locals.isHeroku = isHeroku;
   next();
